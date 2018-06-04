@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+cd /home/ubuntu/More-recipes
+
+sudo npm install babel-preset-es2015
+sudo npm install pm2
+
+npm run server:build
+
+sudo su ubuntu -c 'pm2 start dist/app.js'
